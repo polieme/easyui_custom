@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Tree</title>
+    <link rel="stylesheet" type="text/css" href="../plugins/easyui/jquery-easyui-1.6.4/themes/metro/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../plugins/easyui/jquery-easyui-1.6.4/themes/icon.css">
+    <script type="text/javascript" src="../plugins/easyui/jquery-easyui-1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../plugins/easyui/jquery-easyui-1.6.4/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../plugins/easyui/jquery-easyui-1.6.4/locale/easyui-lang-zh_CN.js"></script>
+</head>
+<body>
+<div id="main_panel" class="easyui-panel" style="width:100%;height:640px;padding:10px;">
+    <div class="easyui-layout" data-options="fit:true">
+        <div data-options="region:'west',split:true" style="width:20%;padding:10px">
+            <ul class="easyui-tree">
+                <li>
+                    <span>EasyUI</span>
+                    <ul>
+                        <li>
+                            <span>数据表格</span>
+                            <ul>
+                                <li>
+                                    <a href="./datagrid/basic_datagrid.html" target="demo_iframe"><span>基础数据表</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/fluid_datagrid.html" target="demo_iframe"><span>流式数据表格（横向占100%）</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/transform_datagrid_from_table.html" target="demo_iframe"><span>数据表格的变换表（将静态trtd转成easyui表格）</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/datagrid_selection.html" target="demo_iframe"><span>数据表格选择器</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/row_editing_in_datagrid.html" target="demo_iframe"><span>数据表格的行编辑</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/multiple_sorting.html" target="demo_iframe"><span>多项分类(表头排序)</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/frozen_rows_in_datagrid.html" target="demo_iframe"><span>在数据表格中冻结的行(冻结行冻结列)</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/context_menu_on_datagrid.html" target="demo_iframe"><span>数据表格DataGrid中的语境菜单</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/column_group.html" target="demo_iframe"><span>栏目组（合并表头）</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/checkbox_selection_on_grid.html" target="demo_iframe"><span>数据表格DataGrid上的复选框选择</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/cell_editing_in_datagrid.html" target="demo_iframe"><span>数据表格的单元格编辑</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/aligning_columns_in_datagrid.html" target="demo_iframe"><span>数据表格DataGrid的列对齐</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/cache_edit_for_datagrid.html" target="demo_iframe"><span>数据表格的编辑缓存</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/datagrid_cell_style.html" target="demo_iframe"><span>数据表格单元格风格</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/client_side_pagination_in_datagrid.html" target="demo_iframe"><span>数据表格的客户端分页</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/datagrid_complex_toolbar.html" target="demo_iframe"><span>数据表格复杂工具栏</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/custom_datagrid_pager.html" target="demo_iframe"><span>自定义数据表格分页</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/footer_rows_in_datagrid.html" target="demo_iframe"><span>数据表格的尾行</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/frozen_columns_in_datagrid.html" target="demo_iframe"><span>数据表格的固定列</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/merge_cells_for_datagrid.html" target="demo_iframe"><span>数据表格合并单元格</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/row_border_in_datagrid.html" target="demo_iframe"><span>数据表格的行边距</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/datagrid_row_style.html" target="demo_iframe"><span>数据表格的行风格</span></a>
+                                </li>
+                                <li>
+                                    <a href="./datagrid/datagrid_with_toolbar.html" target="demo_iframe"><span>带工具栏的数据表格</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-options="state:'closed'">
+                            <span>Program Files</span>
+                            <ul>
+                                <li>Intel</li>
+                                <li>Java</li>
+                                <li>Microsoft Office</li>
+                                <li>Games</li>
+                            </ul>
+                        </li>
+                        <li>index.html</li>
+                        <li>about.html</li>
+                        <li>welcome.html</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div data-options="region:'center'" style="width:80%;padding:10px;overflow: hidden">
+            <iframe style="width: 100%;height: 100%;" scrolling="no" name="demo_iframe"></iframe>
+        </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        window.onresize=function(){
+           /* var winHeight = 0;
+            if (window.innerHeight)
+                winHeight = window.innerHeight;
+            else if ((document.body) && (document.body.clientHeight))
+                winHeight = document.body.clientHeight;
+            $("#main_panel").css("height",winHeight);
+            debugger;
+            console.log(winHeight);*/
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Merge Cells for DataGrid</title>
+    <script src="../../js/common/common_css.js"></script>
+    <script src="../../js/common/common_js.js"></script>
+</head>
+<body>
+<h2>Merge Cells for DataGrid</h2>
+<p>Cells in DataGrid body can be merged.</p>
+<div style="margin:20px 0;"></div>
+<table class="easyui-datagrid" title="Merge Cells for DataGrid" style="width:100%;height:250px"
+       data-options="
+				rownumbers: true,
+				singleSelect: true,
+				iconCls: 'icon-save',
+				url: '../../temp_data/datagrid/datagrid_data.json',
+				method: 'get',
+				onLoadSuccess: onLoadSuccess
+			">
+    <thead>
+    <tr>
+        <th data-options="field:'productid'" width="15%">Product</th>
+        <th data-options="field:'itemid'" width="15%">Item ID</th>
+        <th data-options="field:'listprice',align:'right'" width="15%">List Price</th>
+        <th data-options="field:'unitcost',align:'right'" width="15%">Unit Cost</th>
+        <th data-options="field:'attr1'" width="15%">Attribute</th>
+        <th data-options="field:'status',align:'center'" width="25%">Status</th>
+    </tr>
+    </thead>
+</table>
+<script type="text/javascript">
+    function onLoadSuccess(data){
+        var merges = [{
+            index: 2,
+            rowspan: 2
+        },{
+            index: 5,
+            rowspan: 2
+        },{
+            index: 7,
+            rowspan: 3
+        }];
+        for(var i=0; i<merges.length; i++){
+            $(this).datagrid('mergeCells',{
+                index: merges[i].index,
+                field: 'productid',
+                rowspan: merges[i].rowspan
+            });
+        }
+    }
+</script>
+</body>
+</html>
