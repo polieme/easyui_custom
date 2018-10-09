@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DateBox Buttons</title>
+    <script src="../../js/common/common_css.js"></script>
+    <script src="../../js/common/common_js.js"></script>
+</head>
+<body>
+<h2>DateBox Buttons</h2>
+<p>This example shows how to customize the datebox buttons underneath the calendar.</p>
+<div style="margin:20px 0;"></div>
+<input class="easyui-datebox"></input>
+<input class="easyui-datebox" data-options="buttons:buttons"></input>
+<script>
+    var buttons = $.extend([], $.fn.datebox.defaults.buttons);
+    buttons.splice(1, 0, {
+        text: 'MyBtn',
+        handler: function(target){
+            alert('click MyBtn');
+        }
+    });
+</script>
+</body>
+</html>

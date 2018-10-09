@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Dialog</title>
+    <script src="../../js/common/common_css.js"></script>
+    <script src="../../js/common/common_js.js"></script>
+</head>
+<body>
+<h2>Basic Dialog</h2>
+<p>Click below button to open or close dialog.</p>
+<div style="margin:20px 0;">
+    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="$('#dlg').dialog('open')">Open</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="$('#dlg').dialog('close')">Close</a>
+</div>
+<div id="dlg" class="easyui-dialog" title="Basic Dialog" data-options="iconCls:'icon-save'" style="width:400px;height:200px;padding:10px">
+    The dialog content.
+</div>
+</body>
+</html>

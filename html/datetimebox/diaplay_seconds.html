@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Seconds</title>
+    <script src="../../js/common/common_css.js"></script>
+    <script src="../../js/common/common_js.js"></script>
+</head>
+<body>
+<h2>Display Seconds</h2>
+<p>The user can decide to display seconds part or not.</p>
+<div style="margin:20px 0;">
+    <span>Show Seconds: </span>
+    <input type="checkbox" checked onchange="$('#dt').datetimebox({showSeconds:$(this).is(':checked')})">
+</div>
+<input id="dt" class="easyui-datetimebox" style="width:200px">
+</body>
+</html>
