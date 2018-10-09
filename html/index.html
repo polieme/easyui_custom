@@ -8,11 +8,13 @@
     <script type="text/javascript" src="../plugins/easyui/jquery-easyui-1.6.4/jquery.min.js"></script>
     <script type="text/javascript" src="../plugins/easyui/jquery-easyui-1.6.4/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="../plugins/easyui/jquery-easyui-1.6.4/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="../plugins/showdown/showdown-1.8.6/dist/showdown.min.js"></script>
+    <link rel="stylesheet" href="../plugins/highlight/highlight-9.12.0/styles/darcula.css">
+    <script src="../plugins/highlight/highlight-9.12.0/highlight.pack.js"></script>
 </head>
 <body>
 <div class="easyui-layout" style="width:100%;height:650px;">
-    <div data-options="region:'east',split:true" title="代码" style="width:20%;overflow: hidden">
-        <iframe style="width: 100%;height: 100%;border: 0px" name="demo_iframe" src="./datagrid/basic_datagrid_code.html"></iframe>
+    <div data-options="region:'east',split:true" title="代码" style="width:20%" id="code">
     </div>
     <div data-options="region:'west',split:true" title="EasyUI Demo" style="width:20%;padding:10px">
         <ul class="easyui-tree">
@@ -177,6 +179,64 @@
                             </li>
                         </ul>
                     </li>
+                    <li data-options="state:'closed'">
+                        <span>布局</span>
+                        <ul>
+                            <li>
+                                <a href="./layout/basic_layout.html" target="demo_iframe">基础布局</a>
+                            </li>
+                            <li>
+                                <a href="./layout/full_screen_layout.html" target="demo_iframe">全屏布局</a>
+                            </li>
+                            <li>
+                                <a href="./layout/fluid_layout.html" target="demo_iframe">流式布局</a>
+                            </li>
+                            <li>
+                                <a href="./layout/auto_height_for_layout.html" target="demo_iframe">自适应高度布局</a>
+                            </li>
+                            <li>
+                                <a href="./layout/nested_layout.html" target="demo_iframe">嵌套布局</a>
+                            </li>
+                            <li>
+                                <a href="./layout/no_collapsible_button_in_layout.html" target="demo_iframe">没有折叠按钮的布局</a>
+                            </li>
+                            <li>
+                                <a href="./layout/complex_layout.html" target="demo_iframe">复杂布局</a>
+                            </li>
+                            <li>
+                                <a href="./layout/add_and_remove_layout.html" target="demo_iframe">添加和移除布局</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-options="state:'closed'">
+                        <span>文本框</span>
+                        <ul>
+                            <li>
+                                <a href="./textbox/basic_textbox.html" target="demo_iframe">基本文本框</a>
+                            </li>
+                            <li>
+                                <a href="./textbox/fluid_textbox.html" target="demo_iframe">流式文本框</a>
+                            </li>
+                            <li>
+                                <a href="./textbox/multiline_textbox.html" target="demo_iframe">多行文本框</a>
+                            </li>
+                            <li>
+                                <a href="./textbox/textbox_with_clear_icon.html" target="demo_iframe">带清除图标的文本框</a>
+                            </li>
+                            <li>
+                                <a href="./textbox/textbox_with_icons.html" target="demo_iframe">带图标的文本框</a>
+                            </li>
+                            <li>
+                                <a href="./textbox/custom_textbox.html" target="demo_iframe">自定义文本框</a>
+                            </li>
+                            <li>
+                                <a href="./textbox/textbox_with_button.html" target="demo_iframe">带按钮的文本框</a>
+                            </li>
+                            <li>
+                                <a href="./textbox/textbox_size.html" target="demo_iframe">文本框大小</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li>index.html</li>
                     <li>about.html</li>
                     <li>welcome.html</li>
@@ -200,6 +260,19 @@
             debugger;
             console.log(winHeight);*/
         }
+
+        //展示和高亮代码
+        $('li a').click(function(){
+            $.get(this.href,function(data){
+                var converter = new showdown.Converter();
+                data = "``` \n"+data+" \n ```";
+                var html = converter.makeHtml(data);
+                document.getElementById("code").innerHTML = html;
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+            })
+        })
     })
 </script>
 </body>
