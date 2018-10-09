@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button Align on FileBox</title>
+    <script src="../../js/common/common_css.js"></script>
+    <script src="../../js/common/common_js.js"></script>
+</head>
+<body>
+<h2>Button Align on FileBox</h2>
+<p>Change the button align to the left or right of filebox.</p>
+<div style="margin:20px 0 40px 0;"></div>
+<span>Select Button Align:</span>
+<select onchange="changeAlign(this.value)">
+    <option value="left">Left</option>
+    <option value="right" selected>Right</option>
+</select>
+<div style="margin:20px 0;"></div>
+<input id="fb" class="easyui-filebox" style="width:400px" data-options="prompt:'Choose a file...'">
+<script type="text/javascript">
+    function changeAlign(align){
+        $('#fb').filebox({buttonAlign:align});
+    }
+</script>
+</body>
+</html>

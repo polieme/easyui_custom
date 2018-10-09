@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Tooltip Content</title>
+    <script src="../../js/common/common_css.js"></script>
+    <script src="../../js/common/common_js.js"></script>
+</head>
+<body>
+<h2>Custom Tooltip Content</h2>
+<p>Access to each elements attribute to get the tooltip content.</p>
+<div style="margin:20px 0;"></div>
+<div class="easyui-panel">
+    <div id="pg" data-options="total:114"></div>
+</div>
+
+<script>
+    $(function(){
+        $('#pg').pagination().find('a.l-btn').tooltip({
+            content: function(){
+                var cc = $(this).find('span.l-btn-icon').attr('class').split(' ');
+                var icon = cc[1].split('-')[1];
+                return icon + ' page';
+            }
+        });
+    });
+</script>
+</body>
+</html>
