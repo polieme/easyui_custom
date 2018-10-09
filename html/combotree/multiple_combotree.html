@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiple ComboTree</title>
+    <script src="../../js/common/common_css.js"></script>
+    <script src="../../js/common/common_js.js"></script>
+</head>
+<body>
+<h2>Multiple ComboTree</h2>
+<p>Click the right arrow button to show the tree panel and select multiple nodes.</p>
+<div style="margin:20px 0">
+    <span>Cascade Check: </span>
+    <input type="checkbox" checked onclick="$('#cc').combotree({cascadeCheck:$(this).is(':checked')})">
+</div>
+<select id="cc" class="easyui-combotree" data-options="url:'../../temp_data/tree/tree_data.json',method:'get'" multiple
+        style="width:200px;"></select>
+</body>
+</html>
